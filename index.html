@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>TÍNH ĐIỂM TUYỂN SINH</h1>
+    <input type="text" id="diemChuan" placeholder="Điểm chuẩn" />
+    <input type="text" id="diemToan" placeholder="Điểm Toán" />
+    <input type="text" id="diemLy" placeholder="Điểm Lý" />
+    <input type="text" id="diemHoa" placeholder="Điểm Hóa" />
+    <input type="text" id="khuVuc" placeholder="Khu vực (A, B, C, X)" />
+    <input type="text" id="doiTuong" placeholder="Đối tượng (1, 2, 3, 0)" />
+    <button id="btn_tinhDiem">Tính điểm</button>
+    <p id="ketQua"></p>
+
+    <hr>
+    <h1>TÍNH TIỀN ĐIỆN</h1>
+    <input type="text" id="soDien" placeholder="Số điện tiêu thụ (kWh)" />
+    <button id="btn_tinhTienDien">Tính tiền điện</button>
+    <p id="ketQuaTienDien"></p>
+
+    <hr>
+    <h1>TÍNH THUẾ THU NHẬP CÁ NHÂN</h1>
+    <input type="text" id="hoTen" placeholder="Họ và tên" />
+    <input type="number" id="tongThuNhap" placeholder="Tổng thu nhập năm" />
+    <input type="number" id="soNguoiPhuThuoc" placeholder="Số người phụ thuộc" />
+    <button id="btn_tinhThue">Tính thuế</button>
+    <p id="ketQuaThue"></p>
+
+    <hr>
+    <div>
+        <h1>TÍNH TIỀN CÁP</h1>
+
+        <h2>Vui lòng chọn loại khách hàng:</h2>
+        <ul style="list-style: none;">
+            <li>
+                <input type="radio" id="caNhan" name="selector" onchange="xuLyLoaiKhachHang()">
+                <label for="caNhan">Nhà dân</label>
+            </li>
+
+            <li>
+                <input type="radio" id="doanhNghiep" name="selector" onchange="xuLyLoaiKhachHang()">
+                <label for="doanhNghiep">Doanh nghiệp</label>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Mã khách hàng</h2>
+        <input type="text" id="code" placeholder="Mã khách hàng">
+    </div>
+
+    <div id="divSoKetNoi" style="display: none;">
+        <h2>Số kết nối</h2>
+        <input type="number" id="soKetNoi" placeholder="Số kết nối">
+    </div>
+
+    <div>
+        <h2>Số kênh cao cấp</h2>
+        <input type="number" id="soKenhCaoCap" placeholder="Số kênh cao cấp">
+    </div>
+
+    <div style="margin-top: 20px;">
+        <button type="button" onclick="tinhTienCap()">TÍNH TIỀN</button>
+    </div>
+
+    <div id="divThanhTien" style="display:none">
+        <h2>
+            Thành tiền:
+            <span id="xuatTien">0 USD</span>
+        </h2>
+    </div>
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
